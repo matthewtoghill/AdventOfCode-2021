@@ -9,10 +9,10 @@ namespace Day16
         private static readonly string input = File.ReadAllText(@"..\..\..\data\day16.txt");
         static void Main()
         {
-            string binary = HexToBinary(input);
-            Packet packet = new Packet(binary);
+            Packet packet = new Packet(HexToBinary(input));
 
             Console.WriteLine($"Part 1: {GetVersionSum(packet)}");
+            Console.WriteLine($"Part 2: {packet.Value}");
         }
 
         private static int GetVersionSum(Packet packet)
